@@ -266,8 +266,8 @@ a:hover::before {
 .sidebar {
   position: fixed;
   top: 0;
-  left: -397px;
-  width: 397px;
+  left: -350px;
+  width: 350px;
   height: 100%;
   background-color: #fff;
   overflow-x: hidden;
@@ -344,5 +344,5 @@ a:hover::before {
 }
 
 .sidebar.open {
-  z-index: 2;
+  z-index: 10000;
 }
