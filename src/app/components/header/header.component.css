@@ -1,137 +1,155 @@
-
-body{
+body {
   margin: -7px;
 }
 
+.header {
+  .header-static {
+    background-color: #01204f;
+    width: 100%;
+    height: 41px;
+  }
 
-.header-static{
-  background-color: #01204f;
-  width: 100%;
-  height: 41px;
-}
+  .informations-manufacturer {
+    background-color: #006594;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 11.5px;
+    padding-bottom: 11.5px;
+
+    .informations-content {
+      display: flex;
+      gap: 20px;
+
+      .informations {
+        .static-informations {
+          color: #fff;
+          font-size: 0.9rem;
+
+          .link-header-contact {
+            color: white;
+          }
+        }
+      }
+    }
+  }
+
+  .options-for-client {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    width: 100%;
+
+    .logo-temporario {
+      padding: 10px;
+      color: #303847;
+
+      .logo-temporario-img {
+        letter-spacing: 2px;
+        font-weight: bold;
+      }
+    }
+
+    .search-shopping-cart {
+      display: flex;
+      width: 100%;
+      max-width: 623px;
+
+      .search-icon {
+        width: 100%;
+        max-width: 387px;
+
+        .input {
+          .search {
+            position: absolute;
+            background-color: #f8f8f8;
+            border-radius: 4px;
+            border: 1px solid #f8f8f8;
+            padding: 10px;
+            width: 100%;
+            max-width: 380px;
+          }
+        }
+
+        .icon {
+          display: flex;
+          justify-content: end;
+
+          .lupa {
+            position: absolute;
+            padding-top: 10px;
+          }
+        }
+      }
+
+      .track-order {
+        display: flex;
+        align-items: center;
+        background-color: #f8f8f8;
+        padding: 10px;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-left: 20px;
+      }
+
+      .block-shopping-cart {
+        display: flex;
+        align-items: center;
+        z-index: 1000;
+        margin-left: 5px;
+
+        .shopping-cart {
+          width: 100%;
+          max-width: 25px;
+          height: 25px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .options-clothes {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 10px;
+    border-bottom: 1px solid #dee2e6;
+
+    .options {
+      .option {
+        color: #616877;
+        font-size: 1rem;
+      }
+    }
+  }
 
 
-.informations-manufacturer{
-  background-color:#006594 ;
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  padding-top: 11.5px;
-  padding-bottom: 11.5px;
-}
-
-.informations-content{
-  display: flex;
-  gap: 20px;
-}
-
-.static-informations{
-  color: #fff;
-  font-size: 0.9rem;
-}
-
-
-.options-for-client{
-  display: flex;
-  justify-content: space-around;
-  margin-top: 20px;
-  width: 100%;
-}
-
-.img-logo{
+.img-logo {
   height: 187px;
   width: 187px;
 }
-.search-icon{
+
+.search-icon {
   width: 100%;
   max-width: 387px;
 }
-.search{
-  position: absolute;
-  background-color: #f8f8f8;
-  border-radius: 4px;
-  border: 1px solid #f8f8f8;
-  padding: 10px;
-  width: 100%;
-  max-width: 380px;
-}
-.icon{
-  display: flex;
-  justify-content: end;
-}
-.lupa{
+
+.lupa {
   position: absolute;
   padding-top: 10px;
 }
 
-
-
-.logo-temporario{
-  padding: 10px;
-  color: #303847;
-}
-
-.logo-temporario-img{
-  letter-spacing: 2px;
-  font-weight: bold;
-}
-
-
-.search-shopping-cart{
-display: flex;
-width: 100%;
-max-width: 623px;
-}
-.block-shopping-cart{
-  display: flex;
-  align-items: center;
-  z-index: 1000;
-  margin-left: 5px;
-}
-
-.shopping-cart{
-  width: 100%;
-  max-width: 25px;
-  height: 25px;
-  cursor: pointer;
-}
-
-.track-order{
-  display: flex;
-  align-items: center;
-  background-color: #f8f8f8;
-  padding: 10px;
-  border-radius: 4px;
-  cursor: pointer;
-  margin-left: 20px;
-}
-
-.options-clothes{
-  display: flex;
-  gap: 40px;
-  justify-content: center;
-  margin-top: 20px;
-  padding: 10px;
-  border-bottom: 1px solid #dee2e6;
-}
-.option{
-  color: #616877;
-  font-size: 1rem;
-}
-
-
-
-a{
+a {
   text-decoration: none;
   color: #616877;
   position: relative;
 }
 
-a:hover{
-  color: #000;
+a:hover {
+  color: #000 !important;
   font-weight: bold;
 }
-
 
 a:hover::before {
   content: '';
@@ -143,9 +161,188 @@ a:hover::before {
   left: 0;
   color: #616877;
   font-weight: bold;
+  }
+
+
+  /* FOR MOBILE 1098px */
+  @media (max-width: 1098px) {
+  .options{
+    display: none;
+  }
+
+  .options-for-client{
+    display: none;
+  }
+  .options-clothes{
+    display: block;
+    gap: 0px;
+  }
+  .menu-mobile{
+    display: flex;
+  }
+
+  .input-search-mobile{
+    display: flex;
+  }
+}
+  }
+
+
+
+/* MOBILE 1098px */
+  .menu-mobile{
+    display: none;
+    justify-content: space-around;
+    align-items: center;
+
+    .content-icon-menu{
+    .icon-menu{
+      width: 37.95px;
+      height: 41px;
+      cursor: pointer;
+    }
+    }
+    .logo-temporario-mobile{
+      padding: 10px;
+      color: #303847;
+      text-align: center;
+
+      .logo-temporario-img-mobile{
+        letter-spacing: 2px;
+        font-weight: bold;
+      }
+    }
+    .block-shopping-cart-mobile {
+      display: flex;
+      align-items: center;
+      z-index: 1000;
+      margin-left: 5px;
+
+      .shopping-cart-mobile {
+        width: 100%;
+        max-width: 37.95px;
+        height: 41px;
+        cursor: pointer;
+      }
+  }
+}
+
+.input-search-mobile{
+  display: none;
+  margin-top: 20px;
+
+  .input-mobile{
+    display: flex;
+    width: 100%;
+
+    .search-mobile{
+      width: 100%;
+      height: 37px;
+      background-color: #f8f8f8;
+      border-radius: 4px;
+      border: 1px solid #f8f8f8;
+    }
+  }
+  .icon-lupa-mobile{
+    position: absolute;
+    width: 90%;
+    justify-content: end;
+    display: flex;
+  }
+  .lupa-mobile{
+    padding-top: 10px;
+  }
+}
+
+/* FOR MOBILE 824px */
+@media (max-width: 824px) {
+.informations-content{
+  display: none !important;
+}
 }
 
 
-.link-header-contact{
+/* MENU QUANDO ABERTO NO MODO MOBILE */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -397px;
+  width: 397px;
+  height: 100%;
+  background-color: #fff;
+  overflow-x: hidden;
+  transition: 0.3s;
+  overflow-y: auto; /* Adiciona a barra de rolagem vertical */
+
+}
+
+.title-sidebar{
+  font-size: 1rem;
+}
+.link-sidebar{
+  font-size: 0.9rem;
+  color: #616877 !important;
+}
+.button-close{
+  background-color: #232f3e;
+  height: 32px;
+  margin-top: -16px;
+  padding: 20px;
+}
+.sidebar.open {
+  left: 0;
+}
+
+.sidebar .close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: transparent;
+  border: none;
   color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  padding: 8px 16px;
+  text-align: left;
+}
+
+.sidebar ul li a {
+  color: white;
+  text-decoration: none;
+  display: block;
+}
+
+.sidebar ul li a:hover {
+  background-color: #575757;
+}
+
+.content-icon-menu {
+  cursor: pointer;
+}
+
+.icon-menu {
+  width: 30px;
+  height: 30px;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.sidebar.open {
+  z-index: 2;
 }

@@ -1,5 +1,6 @@
 
 <body>
+  <div class="header">
   <div class="header-static"></div>
 
   <div class="informations-manufacturer">
@@ -14,7 +15,6 @@
         <span class="static-informations"><a href="" class="link-header-contact">Instagram</a></span>
       </div>
     </div>
-
 
     <div class="informations-content">
       <div class="informations-content">
@@ -35,7 +35,6 @@
       </div>
     </div>
   </div>
-
   </div>
 
 
@@ -47,7 +46,7 @@
     </div>
     <div class="search-shopping-cart">
       <div class="search-icon">
-        <div>
+        <div class="input">
           <input placeholder="O que você procura?" class="search">
         </div>
         <div class="icon">
@@ -58,7 +57,6 @@
       <div class="track-order">
         <span>Acompanhar pedido</span>
       </div>
-
       <div class="block-shopping-cart">
         <img src="icons8-carrinho-de-compras-50 (1).png" alt="" class="shopping-cart">
       </div>
@@ -69,6 +67,65 @@
 
 
 <div class="options-clothes">
+
+<!-- FOR MOBILE -->
+<div class="menu-mobile">
+  <div class="content-icon-menu" (click)="toggleMenu()">
+    <img src="/menu.png" alt="" class="icon-menu">
+  </div>
+  <div class="overlay" *ngIf="isMenuOpen" (click)="closeMenu()"></div>
+  <div class="sidebar" [class.open]="isMenuOpen">
+    <ul>
+      <div class="button-close">
+        <button class="close-btn" (click)="closeMenu()">X</button>
+      </div>
+      <li><h1 class="title-sidebar">Por gênero</h1></li>
+      <li><a href="#" class="link-sidebar">masculino</a></li>
+      <li><a href="#" class="link-sidebar">feminino</a></li>
+      <hr>
+      <li><a href="#" class="link-sidebar">Por categoria</a></li>
+      <li><a href="#" class="link-sidebar">Plus Size</a></li>
+      <li><a href="#" class="link-sidebar">Algodão</a></li>
+      <li><a href="#" class="link-sidebar">Polo</a></li>
+      <li><a href="#" class="link-sidebar">Moletom</a></li>
+      <li><a href="#" class="link-sidebar">Poliéster</a></li>
+      <li><a href="#" class="link-sidebar">PV / Malha fria</a></li>
+      <li><a href="#" class="link-sidebar">DryFit</a></li>
+      <li><a href="#" class="link-sidebar">Fitiness</a></li>
+      <li><a href="#" class="link-sidebar">Mesclada</a></li>
+      <li><a href="#" class="link-sidebar">Personalização</a></li>
+      <hr>
+      <li><h1 class="title-sidebar">Por característica</h1></li>
+      <li><a href="#" class="link-sidebar">Inverno</a></li>
+      <li><a href="#" class="link-sidebar">Básicos</a></li>
+      <li><a href="#" class="link-sidebar">Uniforme</a></li>
+      <hr>
+      <li><h1 class="title-sidebar">Central de ajuda</h1></li>
+      <li><a href="#" class="link-sidebar">Quem somos</a></li>
+      <li><a href="#" class="link-sidebar">Blog</a></li>
+      <li><a href="#" class="link-sidebar">Informações</a></li>
+      <li><a href="#" class="link-sidebar">Depoimentos</a></li>
+      <li><a href="#" class="link-sidebar">Fale conosco</a></li>
+    </ul>
+  </div>
+  <div class="logo-temporario-mobile">
+    <span class="logo-temporario-img-mobile">FABRICANTE MULTIMARCAS</span>
+  </div>
+  <div class="block-shopping-cart-mobile">
+    <img src="icons8-carrinho-de-compras-50 (1).png" alt="" class="shopping-cart-mobile">
+  </div>
+</div>
+<div class="input-search-mobile">
+<div class="input-mobile">
+  <input placeholder="O que você procura?" class="search-mobile">
+</div>
+<div class="icon-lupa-mobile">
+  <img src="lupa.png" alt="" class="lupa-mobile">
+</div>
+</div>
+<!-- <-- --------- -->
+
+
   <div class="options">
   <span class="option"><a href="">Masculino</a></span>
   </div>
@@ -99,11 +156,11 @@
   <div class="options">
     <span class="option"><a href="">Fitness</a></span>
 </div>
-<div>
+<div class="options">
   <span class="option"><a href="">Personalização</a></span>
 </div>
-
 </div>
+  </div>
 </body>
 
 
