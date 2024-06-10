@@ -1,0 +1,97 @@
+
+.footer{
+  background-color: #edeef0;
+  display: flex;
+  justify-content: space-around;
+  padding: 100px 190px 74px 190px;
+  border-bottom: 1px solid #dee2e6;
+
+  @media (max-width: 1291px) {
+    flex-direction: column;
+    padding: 70px 40px 10px 40px;
+  }
+
+  .content-img-logo-footer{
+  height: 60px;
+
+  .logo-footer{
+    height: 187px;
+    width: 187px;
+    margin-top: -66px;
+    cursor: pointer;
+  }
+}
+  .collumn-1-footer{
+    display: flex;
+    flex-direction: column;
+  }
+  h1{
+    font-size: 1rem;
+    font-weight: bold;
+  }
+
+  a{
+    text-decoration: none;
+    color: #616877;;
+  }
+  .content-informations-footer{
+    margin-top: 50px;
+
+    .informations-footer{
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 20px;
+    }
+    .icon-footer{
+      height: 13.59px;
+      width: 13.59px;
+    }
+    .icon-footer-payment{
+      height: 36px;
+      width: 36px;
+    }
+    .icon-description-footer{
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .icon-social-media,
+    .icon-payment{
+      display: flex;
+      gap: 35px;
+
+      .icon-footer-social-media{
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+}
+
+.whatsapp-fixed {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  display: flex;
+  justify-content: end;
+}
+
+.logo-whatsapp-fixed {
+  width: 60px;
+  height: 60px;
+}
+
+
+.footer-nova-busca{
+  display: flex;
+  justify-content: center;
+  font-size: 0.9rem;
+  background-color: #edeef0;
+  color: #616877;
+  text-align: center;
+}
+
+
+

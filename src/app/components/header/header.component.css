@@ -1,5 +1,5 @@
 body {
-  margin: -7px;
+  margin: 0px;
 }
 
 .header {
@@ -40,9 +40,11 @@ body {
     margin-top: 20px;
     width: 100%;
 
-    .logo-temporario {
-      padding: 10px;
-      color: #303847;
+    .logo-style {
+    height: 84px;
+    margin-top: -19px;
+    cursor: pointer;
+
 
       .logo-temporario-img {
         letter-spacing: 2px;
@@ -54,6 +56,7 @@ body {
       display: flex;
       width: 100%;
       max-width: 623px;
+      max-height: 37px;
 
       .search-icon {
         width: 100%;
@@ -112,7 +115,6 @@ body {
     display: flex;
     gap: 40px;
     justify-content: center;
-    margin-top: 20px;
     padding: 10px;
     border-bottom: 1px solid #dee2e6;
 
@@ -128,6 +130,7 @@ body {
 .img-logo {
   height: 187px;
   width: 187px;
+  margin-top: -56px;
 }
 
 .search-icon {
@@ -202,14 +205,11 @@ a:hover::before {
       cursor: pointer;
     }
     }
-    .logo-temporario-mobile{
-      padding: 10px;
-      color: #303847;
-      text-align: center;
+    .logo-style-mobile{
 
-      .logo-temporario-img-mobile{
-        letter-spacing: 2px;
-        font-weight: bold;
+      .img-logo-mobile{
+        height: 130px;
+        cursor: pointer;
       }
     }
     .block-shopping-cart-mobile {

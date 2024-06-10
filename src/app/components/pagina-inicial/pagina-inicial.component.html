@@ -1,1 +1,119 @@
 <app-header></app-header>
+
+
+
+
+<div class="carousel">
+  <button class="carousel-button prev" (click)="prevImage()">&#10094;</button>
+  <img [src]="images[currentIndex]" alt="Imagem do Carrossel">
+  <button class="carousel-button next" (click)="nextImage()">&#10095;</button>
+</div>
+
+<div class="informations-img">
+  <div class="content-icon-information">
+    <div>
+      <img src="linha-de-montagem (1).png" alt="" class="icon-informations">
+    </div>
+    <div>
+      <span class="informations">Produção própria</span>
+    </div>
+    <div>
+      <hr class="vertical-hr">
+    </div>
+  </div>
+  <div class="content-icon-information">
+    <div>
+      <img src="entrega-rapida (1).png" class="icon-informations">
+    </div>
+    <div>
+      <span class="informations">Frete rápido e eficiênte</span>
+    </div>
+    <div>
+      <hr class="vertical-hr">
+    </div>
+  </div>
+  <div class="content-icon-information">
+    <div>
+      <img src="seguro.png" class="icon-informations">
+    </div>
+    <div>
+      <span class="informations">Compra 100% segura</span>
+    </div>
+    <div>
+      <hr class="vertical-hr">
+    </div>
+  </div>
+  <div class="content-icon-information">
+    <div>
+      <img src="parcelamento.png" class="icon-informations">
+    </div>
+    <div>
+      <span class="informations">Até 3x sem juros</span>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="title">
+  <h1>Feminino</h1>
+</div>
+
+<div class="female-options">
+  <div
+    class="img-option-description"
+    *ngFor="let image of currentImagesFemale"
+  >
+    <div>
+      <img [src]="image.src" alt="" class="img-option" />
+    </div>
+    <div>
+      <span class="description">{{ image.description }}</span>
+    </div>
+  </div>
+</div>
+
+<div class="pagination" *ngIf="isMobile">
+  <span
+    class="dot"
+    *ngFor="let dot of paginationDotsFemale; let i = index"
+    [class.active]="i === currentPageFemale"
+    (click)="setCurrentPageFemale(i)"
+  ></span>
+</div>
+
+<div class="title">
+  <h1>Masculino</h1>
+</div>
+
+<div class="male-options">
+  <div
+    class="img-option-description"
+    *ngFor="let image of currentImagesMale"
+  >
+    <div>
+      <img [src]="image.src" alt="" class="img-option" />
+    </div>
+    <div>
+      <span class="description">{{ image.description }}</span>
+    </div>
+  </div>
+</div>
+
+<div class="pagination" *ngIf="isMobile">
+  <span
+    class="dot"
+    *ngFor="let dot of paginationDotsMale; let i = index"
+    [class.active]="i === currentPageMale"
+    (click)="setCurrentPageMale(i)"
+  ></span>
+</div>
+
+
+
+
+
+
+
+
+<app-footer></app-footer>
