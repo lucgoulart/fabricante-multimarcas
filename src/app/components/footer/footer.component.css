@@ -21,6 +21,13 @@
     cursor: pointer;
   }
 }
+
+@media (max-width: 824px) {
+  .logo-footer{
+    height: 130px !important;
+    width: 130px !important;
+  }
+}
   .collumn-1-footer{
     display: flex;
     flex-direction: column;

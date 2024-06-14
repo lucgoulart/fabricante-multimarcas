@@ -131,3 +131,56 @@
       display: none;
     }
   }
+
+  .space-content {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  .content-img-quality {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f1f1f1;
+  }
+
+  .img-quality {
+    max-width: 100%;
+    height: 420px; /* Define a altura fixa para dispositivos maiores */
+    width: auto;
+    cursor: pointer;
+  }
+
+  @media (max-width: 830px) {
+    .space-content {
+      padding-top: 3rem;
+      padding-bottom: 3rem;
+    }
+
+    .content-img-quality {
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+    }
+
+    .img-quality {
+      height: auto; /* Remove a altura fixa para dispositivos menores */
+    }
+  }
+
+  @media (max-width: 1080px) {
+    .space-content {
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+    }
+
+    .content-img-quality {
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+    }
+
+    .img-quality {
+      height: auto; /* Remove a altura fixa para dispositivos menores */
+    }
+  }
+
+
