@@ -184,3 +184,73 @@
   }
 
 
+.collumn-seu-negocio{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+
+  .img-seu-negocio{
+    width: 308px;
+    padding: 10px;
+  }
+  .image-content-background-1{
+    background-color: #e2e2e2;
+    border-radius: 4px;
+  }
+  .image-content-background-2{
+    background-color: #6391cd;
+    border-radius: 4px;
+    max-height: 328px;
+  }
+  .image-content-background-3{
+    background-color: #fafaf8;
+    border-radius: 4px;
+  }
+  .content-title-img-seungc{
+    margin-top: -66px;
+  }
+  .description-seungc{
+    background-color: #f1f1f1;
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    gap: 70px;
+    justify-content: center;
+
+    .button-aproveite{
+      background-color: #0E182F;
+      color: #fff;
+      padding: 10px;
+      border-radius: 20px;
+      cursor: pointer;
+      border: none;
+    }
+  }
+  .ofertas-content{
+
+    .revender, .personalizar, .uniformizar{
+      color: #0E182F;
+      font-weight: bold;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      font-size: 19px;
+    }
+  }
+}
+
+
+
+@media (max-width: 1044px) {
+  .collumn-seu-negocio{
+    flex-direction: column;
+  }
+  .image-content-background-2{
+    max-height: none !important;
+  }
+  .title-seungc{
+    justify-content: center;
+    display: flex;
+  }
+  }
+
