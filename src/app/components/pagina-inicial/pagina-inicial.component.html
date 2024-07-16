@@ -5,7 +5,14 @@
 
 <div class="carousel">
   <button class="carousel-button prev" (click)="prevImage()">&#10094;</button>
-  <img [src]="images[currentIndex]" alt="Imagem do Carrossel">
+  <ng-container *ngIf="images[currentIndex] === 'img-1.png'; else normalImage">
+    <a href="/personalizacao">
+      <img [src]="images[currentIndex]" alt="Imagem do Carrossel">
+    </a>
+  </ng-container>
+  <ng-template #normalImage>
+    <img [src]="images[currentIndex]" alt="Imagem do Carrossel">
+  </ng-template>
   <button class="carousel-button next" (click)="nextImage()">&#10095;</button>
 </div>
 
@@ -146,7 +153,7 @@
         <p class="personalizar">PERSONALIZAR</p>
       </div>
       <div>
-      <button class="button-aproveite">Aproveite</button>
+      <a href="/personalizacao"><button class="button-aproveite">Aproveite</button></a>
       </div>
     </div>
   </div>

@@ -1,3 +1,4 @@
+import { PersonalizacaoComponent } from './components/personalizacao/personalizacao.component';
 import { PaginaInicialComponent } from './components/pagina-inicial/pagina-inicial.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -9,6 +10,8 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatExpansionModule } from '@angular/material/expansion';
 
 
 @NgModule({
@@ -16,7 +19,8 @@ import { FooterComponent } from './components/footer/footer.component';
     AppComponent,
     HeaderComponent,
     PaginaInicialComponent,
-    FooterComponent
+    FooterComponent,
+    PersonalizacaoComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +29,8 @@ import { FooterComponent } from './components/footer/footer.component';
     HttpClientModule,
     CommonModule,
     FormsModule,
-
+    BrowserAnimationsModule,
+    MatExpansionModule
   ],
   exports: [
     HeaderComponent,  // Exporte o HeaderComponent se necessário
