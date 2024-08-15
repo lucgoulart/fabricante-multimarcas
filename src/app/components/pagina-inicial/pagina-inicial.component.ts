@@ -51,6 +51,7 @@ export class PaginaInicialComponent implements OnInit {
   ngOnInit() {
     this.setupPagination();
     this.updateCurrentImages();
+    this.startAutoSlide();
   }
 
   @HostListener('window:resize', ['$event'])

@@ -5,7 +5,7 @@
 
 <div class="carousel">
   <button class="carousel-button prev" (click)="prevImage()">&#10094;</button>
-  <ng-container *ngIf="images[currentIndex] === 'img-1.png'; else normalImage">
+  <ng-container *ngIf="images[currentIndex] === 'img-1.png' || images[currentIndex] === 'img-3.png'; else normalImage">
     <a href="/personalizacao">
       <img [src]="images[currentIndex]" alt="Imagem do Carrossel">
     </a>

@@ -28,6 +28,7 @@ body {
 
           .link-header-contact {
             color: white;
+            text-decoration: none;
           }
         }
       }
@@ -143,13 +144,13 @@ body {
   padding-top: 10px;
 }
 
-a {
+.link {
   text-decoration: none;
   color: #616877;
   position: relative;
 }
 
-a:hover {
+.link:hover {
   color: #000 !important;
   font-weight: bold;
 }
