@@ -4,18 +4,19 @@ body {
 
 .header {
   .header-static {
-    background-color: #01204f;
+    background-color: #000;
     width: 100%;
     height: 41px;
   }
 
   .informations-manufacturer {
-    background-color: #006594;
+    background-color: #e2e2e2;
     width: 100%;
     display: flex;
     justify-content: space-around;
     padding-top: 11.5px;
     padding-bottom: 11.5px;
+    align-items: center;
 
     .informations-content {
       display: flex;
@@ -27,8 +28,12 @@ body {
           font-size: 0.9rem;
 
           .link-header-contact {
-            color: white;
+            color: #000;
             text-decoration: none;
+          }
+          .icon-header{
+            height: 23px;
+            width: 23px;
           }
         }
       }
@@ -38,8 +43,11 @@ body {
   .options-for-client {
     display: flex;
     justify-content: space-around;
-    margin-top: 20px;
     width: 100%;
+    background-color: #000;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
 
     .logo-style {
     height: 84px;
@@ -66,7 +74,7 @@ body {
         .input {
           .search {
             position: absolute;
-            background-color: #f8f8f8;
+            background-color: #e2e2e2;
             border-radius: 4px;
             border: 1px solid #f8f8f8;
             padding: 10px;
@@ -89,7 +97,7 @@ body {
       .track-order {
         display: flex;
         align-items: center;
-        background-color: #f8f8f8;
+        background-color: #e2e2e2;
         padding: 10px;
         border-radius: 4px;
         cursor: pointer;
@@ -116,8 +124,10 @@ body {
     display: flex;
     gap: 40px;
     justify-content: center;
-    padding: 10px;
-    border-bottom: 1px solid #dee2e6;
+    padding: 30px;
+    border-top: 1px solid #555555; ;
+    border-bottom: 1px solid #555555;
+    background-color: #000;
 
     .options {
       .option {
@@ -146,7 +156,7 @@ body {
 
 .link {
   text-decoration: none;
-  color: #616877;
+  color: #fff;
   position: relative;
 }
 
@@ -239,14 +249,14 @@ a:hover::before {
     .search-mobile{
       width: 100%;
       height: 37px;
-      background-color: #f8f8f8;
+      background-color: #e2e2e2;
       border-radius: 4px;
       border: 1px solid #f8f8f8;
     }
   }
   .icon-lupa-mobile{
     position: absolute;
-    width: 90%;
+    width: 88%;
     justify-content: end;
     display: flex;
   }
