@@ -35,7 +35,55 @@
 
 .carousel-button.prev {
   left: 10px;
+}.carousel {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
 }
+
+.carousel-container {
+  display: flex;
+  width: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-container .imagens-carousel {
+  flex: 0 0 100%; /* Cada item ocupa 100% do carrossel */
+  text-align: center; /* Centraliza o conteúdo */
+}
+
+.carousel-container a {
+  display: block; /* Faz com que o link ocupe o espaço completo */
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-container img {
+  width: 100%;
+  height: auto; /* Garante que a proporção da imagem seja mantida */
+  display: block;
+}
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  cursor: pointer;
+  z-index: 2;
+  padding: 10px;
+}
+
+.carousel-button.prev {
+  left: 10px;
+}
+
+.carousel-button.next {
+  right: 10px;
+}
+
 
 .carousel-button.next {
   right: 10px;

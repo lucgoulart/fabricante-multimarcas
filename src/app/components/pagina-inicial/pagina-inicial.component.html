@@ -1,12 +1,15 @@
 <app-header></app-header>
 <div class="carousel">
   <div class="carousel-container" [style.transform]="getTransform()" [style.transition]="transitionStyle">
-    <img *ngFor="let image of images" [src]="image" alt="Imagem do Carrossel">
+    <div *ngFor="let image of images" class="imagens-carousel">
+      <a [routerLink]="image.rota">
+        <img [src]="image.src" alt="Imagem do Carrossel">
+      </a>
+    </div>
   </div>
   <button class="carousel-button prev" (click)="prevImage()">&#10094;</button>
   <button class="carousel-button next" (click)="nextImage()">&#10095;</button>
 </div>
-
 
 <div class="informations-img">
   <div class="content-icon-information">

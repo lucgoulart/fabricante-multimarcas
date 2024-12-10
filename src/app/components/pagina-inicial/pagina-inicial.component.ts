@@ -39,10 +39,10 @@ export class PaginaInicialComponent implements OnInit {
   currentImagesFemale = this.imagesGalleryFemale;
 
 
-  images: string[] = [
-    'img-1.png',
-    'img-3.png',
-    'img-2.png'
+  images: { src: string; rota: string }[] = [
+    { src: 'img-1.png', rota: '/rota-1' },
+    { src: 'img-2.png', rota: '/rota-2' },
+    { src: 'img-3.png', rota: '/personalizacao' }
   ];
 
 
