@@ -45,8 +45,10 @@ export class PaginaInicialComponent implements OnInit {
     'img-2.png'
   ];
 
+
   currentIndex: number = 0;
   intervalId: any;
+  transitionStyle: string = 'transform 0.5s ease-in-out';
 
   ngOnInit() {
     this.setupPagination();
@@ -100,17 +102,30 @@ export class PaginaInicialComponent implements OnInit {
     }
   }
 
-  startAutoSlide() {
-  this.intervalId = setInterval(() => {
-  this.nextImage();
-  }, 5000);
-  }
-
-  prevImage() {
-    this.currentIndex = (this.currentIndex === 0) ? this.images.length - 1 : this.currentIndex - 1;
+  getTransform(): string {
+    return `translateX(-${this.currentIndex * 100}%)`;
   }
 
   nextImage() {
-    this.currentIndex = (this.currentIndex === this.images.length - 1) ? 0 : this.currentIndex + 1;
+    this.currentIndex = (this.currentIndex + 1) % this.images.length; // Cicla para a próxima imagem
+    this.resetAutoSlide(); // Reinicia o temporizador
+  }
+
+  prevImage() {
+    this.currentIndex = (this.currentIndex - 1 + this.images.length) % this.images.length; // Cicla para a imagem anterior
+    this.resetAutoSlide(); // Reinicia o temporizador
+  }
+
+  startAutoSlide() {
+    this.intervalId = setInterval(() => {
+      this.nextImage();
+    }, 5000); // Troca de imagem a cada 5 segundos
+  }
+
+  resetAutoSlide() {
+    if (this.intervalId) {
+      clearInterval(this.intervalId); // Para o intervalo atual
+    }
+    this.startAutoSlide(); // Reinicia o intervalo
   }
 }

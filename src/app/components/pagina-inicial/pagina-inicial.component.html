@@ -1,20 +1,12 @@
 <app-header></app-header>
-
-
-
-
 <div class="carousel">
+  <div class="carousel-container" [style.transform]="getTransform()" [style.transition]="transitionStyle">
+    <img *ngFor="let image of images" [src]="image" alt="Imagem do Carrossel">
+  </div>
   <button class="carousel-button prev" (click)="prevImage()">&#10094;</button>
-  <ng-container *ngIf="images[currentIndex] === 'img-1.png' || images[currentIndex] === 'img-3.png'; else normalImage">
-    <a href="/personalizacao">
-      <img [src]="images[currentIndex]" alt="Imagem do Carrossel">
-    </a>
-  </ng-container>
-  <ng-template #normalImage>
-    <img [src]="images[currentIndex]" alt="Imagem do Carrossel">
-  </ng-template>
   <button class="carousel-button next" (click)="nextImage()">&#10095;</button>
 </div>
+
 
 <div class="informations-img">
   <div class="content-icon-information">

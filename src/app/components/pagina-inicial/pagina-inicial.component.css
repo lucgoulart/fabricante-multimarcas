@@ -6,14 +6,19 @@
 
 .carousel {
   position: relative;
-  margin: auto;
+  overflow: hidden;
+  width: 100%;
 }
 
-.carousel img {
-  width: 100%;
+.carousel-container {
+  display: flex;
+  width: 100%; /* Ajuste conforme necessário */
   height: 100%;
-  object-fit: cover;
-  cursor: pointer;
+}
+
+.carousel-container img {
+  width: 100%;
+  flex-shrink: 0;
 }
 
 .carousel-button {
@@ -23,9 +28,9 @@
   background-color: rgba(0, 0, 0, 0.5);
   border: none;
   color: white;
-  padding: 10px;
   cursor: pointer;
-  z-index: 1;
+  z-index: 2;
+  padding: 10px;
 }
 
 .carousel-button.prev {
@@ -35,6 +40,7 @@
 .carousel-button.next {
   right: 10px;
 }
+
 
 
 .informations-img{
@@ -253,4 +259,3 @@
     display: flex;
   }
   }
-
