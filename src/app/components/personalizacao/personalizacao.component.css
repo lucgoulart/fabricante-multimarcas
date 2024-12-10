@@ -311,6 +311,25 @@ background-color: #4fc8d0;
     font-family: sans-serif;
     text-align: center;
   }
+  .description-marcas-bloco{
+    display: flex;
+    justify-content: center;
+    height: 30rem;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+    gap: 20px;
+
+    img{
+      width: 90px;
+      height: 90px;
+      cursor: pointer;
+    }
+    .column-logos{
+      display: flex;
+      gap: 100px;
+    }
+  }
 }
 
 .duvidas-frequentes{
