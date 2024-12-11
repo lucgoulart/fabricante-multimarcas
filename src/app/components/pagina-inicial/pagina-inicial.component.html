@@ -66,10 +66,10 @@
     class="img-option-description"
     *ngFor="let image of currentImagesFemale"
   >
-    <div>
+    <div class="background-imgs-option">
       <img [src]="image.src" alt="" class="img-option" />
     </div>
-    <div>
+      <div class="content-description">
       <span class="description">{{ image.description }}</span>
     </div>
   </div>
@@ -93,10 +93,10 @@
     class="img-option-description"
     *ngFor="let image of currentImagesMale"
   >
-    <div>
+    <div class="background-imgs-option">
       <img [src]="image.src" alt="" class="img-option" />
     </div>
-    <div>
+    <div class="content-description">
       <span class="description">{{ image.description }}</span>
     </div>
   </div>

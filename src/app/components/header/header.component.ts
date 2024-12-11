@@ -19,4 +19,18 @@ export class HeaderComponent implements OnInit {
   closeMenu() {
     this.isMenuOpen = false;
   }
+
+  abrirModal(): void {
+    const modal = document.getElementById('avisoModal');
+    if (modal) {
+      modal.style.display = 'block';
+    }
+  }
+
+  fecharModal(): void {
+    const modal = document.getElementById('avisoModal');
+    if (modal) {
+      modal.style.display = 'none';
+    }
+  }
 }

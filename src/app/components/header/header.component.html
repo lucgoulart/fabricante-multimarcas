@@ -68,23 +68,20 @@
       </div>
 
       <div class="track-order">
-        <span>Acompanhar pedido</span>
+        <span (click)="abrirModal()">Acompanhar pedido</span>
       </div>
       <div class="block-shopping-cart">
-        <img src="icons8-carrinho-de-compras-50 (1).png" alt="" class="shopping-cart">
+        <img src="carrinho-de-compras.png" alt="Carrinho de compras" class="shopping-cart">
       </div>
   </div>
 </div>
-
-
-
 
 <div class="options-clothes">
 
 <!-- FOR MOBILE -->
 <div class="menu-mobile">
   <div class="content-icon-menu" (click)="toggleMenu()">
-    <img src="/menu.png" alt="" class="icon-menu">
+    <img src="/menu-mobile.png" alt="" class="icon-menu">
   </div>
   <div class="overlay" *ngIf="isMenuOpen" (click)="closeMenu()"></div>
   <div class="sidebar" [class.open]="isMenuOpen">
@@ -128,7 +125,7 @@
 
 
   <div class="block-shopping-cart-mobile">
-    <img src="icons8-carrinho-de-compras-50 (1).png" alt="" class="shopping-cart-mobile">
+    <img src="carrinho-de-compras.png" alt="Carrinho de compras" class="shopping-cart-mobile">
   </div>
 </div>
 <div class="input-search-mobile">
@@ -177,6 +174,26 @@
 </div>
 <div class="options">
   <span class="option"><a class="link" href="/personalizacao">Personalização</a></span>
+</div>
+</div>
+  </div>
+
+  <div class="modal" id="avisoModal">
+    <div class="modal-content">
+      <span class="close" (click)="fecharModal()">&times;</span>
+      <h2>Acompanhar pedido</h2>
+      <p>
+        Após finalizar a compra, você poderá acompanhar o envio do seu pedido no site dos Correios. Assim que o vendedor fornecer o código de rastreamento, acesse o site:
+        <a href="https://rastreamento.correios.com.br/app/index.php" target="_blank">https://rastreamento.correios.com.br</a>.
+      </p>
+<div>
+  <img src="correios.png" alt="" class="img-modal">
+</div>
+      <p>
+        Caso tenha dúvidas ou precise de mais informações, entre em contato com o vendedor pelo WhatsApp <a href="https://wa.me/11988004463?text=Olá,%20estou%20com%20problemas%20para%20acompanhar%20meu%20pedido%20,%20poderia%20me%20ajuda?" target="_blank">clique aqui para ser redirecionado para o atendimento</a>.
+      </p>
+<div class="button-modal">
+  <button (click)="fecharModal()">Fechar</button>
 </div>
 </div>
   </div>

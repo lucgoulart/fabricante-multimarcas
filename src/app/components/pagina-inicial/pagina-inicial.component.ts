@@ -8,23 +8,19 @@ import { Component, HostListener, OnInit } from '@angular/core';
 export class PaginaInicialComponent implements OnInit {
 
   imagesGalleryMale = [
-    { src: 'camiseta_masculina.png', description: 'Camiseta básica' },
-    { src: 'camiseta_masculina.png', description: 'Kit\'s sortidos' },
+    { src: 'basica.png', description: 'Camiseta básica' },
+    { src: 'kit.png', description: 'Kit\'s sortidos' },
     { src: 'camiseta_masculina.png', description: 'Academia' },
-    { src: 'camiseta_masculina.png', description: 'Polo' },
     { src: 'camiseta_masculina.png', description: 'DryFit' },
-    { src: 'camiseta_masculina.png', description: 'Bermudas' },
-    { src: 'camiseta_masculina.png', description: 'Regatas' },
+    { src: 'regata.png', description: 'Regatas' },
   ];
 
 
   imagesGalleryFemale = [
-    { src: 'camiseta_masculina.png', description: 'Camiseta básica' },
+    { src: 'basica-fem.png', description: 'Camiseta básica' },
     { src: 'camiseta_masculina.png', description: 'Kit\'s sortidos' },
     { src: 'camiseta_masculina.png', description: 'Academia' },
-    { src: 'camiseta_masculina.png', description: 'Polo' },
     { src: 'camiseta_masculina.png', description: 'Regatas' },
-    { src: 'camiseta_masculina.png', description: 'Manga longa' },
     { src: 'camiseta_masculina.png', description: 'Malha fria' },
   ];
   imagesPerPage = 3;
@@ -40,9 +36,9 @@ export class PaginaInicialComponent implements OnInit {
 
 
   images: { src: string; rota: string }[] = [
-    { src: 'img-1.png', rota: '/rota-1' },
-    { src: 'img-2.png', rota: '/rota-2' },
-    { src: 'img-3.png', rota: '/personalizacao' }
+    { src: 'moda-fitness.png', rota: '/rota-1' },
+    { src: 'monte-kit.png', rota: '/rota-2' },
+    { src: 'personalize3.png', rota: '/personalizacao' }
   ];
 
 
