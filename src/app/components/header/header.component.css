@@ -165,7 +165,7 @@ body {
   font-weight: bold;
 }
 
-a:hover::before {
+.link:hover::before {
   content: '';
   position: absolute;
   width: 100%;

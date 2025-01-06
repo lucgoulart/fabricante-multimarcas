@@ -12,6 +12,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { QuemSomosComponent } from './components/quem-somos/quem-somos/quem-somos.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { MatExpansionModule } from '@angular/material/expansion';
     HeaderComponent,
     PaginaInicialComponent,
     FooterComponent,
-    PersonalizacaoComponent
+    PersonalizacaoComponent,
+    QuemSomosComponent,
   ],
   imports: [
     BrowserModule,
