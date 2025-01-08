@@ -13,6 +13,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { QuemSomosComponent } from './components/quem-somos/quem-somos/quem-somos.component';
+import { ColunaProdutosComponent } from './components/componentes-globais/coluna-produtos/coluna-produtos.component';
 
 
 @NgModule({
@@ -23,6 +24,7 @@ import { QuemSomosComponent } from './components/quem-somos/quem-somos/quem-somo
     FooterComponent,
     PersonalizacaoComponent,
     QuemSomosComponent,
+    ColunaProdutosComponent
   ],
   imports: [
     BrowserModule,

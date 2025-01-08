@@ -1,0 +1,14 @@
+<!-- src/app/coluna-produtos/coluna-produtos.component.html -->
+<div class="coluna-produtos">
+  <div class="produto" *ngFor="let produto of produtos">
+    <div class="imagem-container">
+      <img [src]="produto.imagem" alt="Imagem do produto" class="imagem" />
+    </div>
+    <div class="informacoes">
+      <p><strong>Preço:</strong> {{ produto.preco }}</p>
+      <p><strong>Tamanho:</strong> {{ produto.tamanho }}</p>
+      <p><strong>Pagamento:</strong> {{ produto.pagamento }}</p>
+      <button (click)="adicionarAoCarrinho(produto)">Adicionar ao Carrinho</button>
+    </div>
+  </div>
+</div>

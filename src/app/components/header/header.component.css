@@ -199,7 +199,13 @@ body {
     display: flex;
   }
 }
+
+@media (max-width: 545px) {
+  .lupa-mobile{
+    display: none;
   }
+}
+}
 
 
 
@@ -295,7 +301,7 @@ body {
   color: #616877 !important;
 }
 .button-close{
-  background-color: #232f3e;
+  background-color: #000;
   height: 32px;
   margin-top: -16px;
   padding: 20px;
@@ -426,3 +432,14 @@ body {
     cursor: pointer;
   }
 }
+
+.carrinho-dropdown{
+  background-color: white;
+  background-color: white;
+  position: absolute;
+  z-index: 1000;
+  width: 321px;
+  margin-left: -7rem;
+  margin-top: 25rem;
+}
+

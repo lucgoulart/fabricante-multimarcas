@@ -113,8 +113,19 @@
 
 <div class="space-content">
   <div class="content-img-quality">
-    <H1 style="font-size: 5rem;">FAZER BLOCO JA EXIBINDO OS PRODUTOS, COMO KITS , CAMISETAS ETC ...</H1>
+    <H1 style="font-size: 5rem;">Os produtos mais vendidos</H1>
   </div>
+
+  <app-coluna-produtos
+  [produtos]="[
+    { imagem: 'camiseta1.jpg', preco: 'R$ 49,90', tamanho: 'M', pagamento: 'Pix ou Cartão' },
+    { imagem: 'camiseta2.jpg', preco: 'R$ 59,90', tamanho: 'G', pagamento: 'Pix ou Boleto' },
+    { imagem: 'camiseta3.jpg', preco: 'R$ 69,90', tamanho: 'P', pagamento: 'Cartão em 2x' },
+    { imagem: 'camiseta4.jpg', preco: 'R$ 79,90', tamanho: 'GG', pagamento: 'Pix' },
+    { imagem: 'camiseta5.jpg', preco: 'R$ 89,90', tamanho: 'M', pagamento: 'Cartão em 3x' }
+  ]"
+></app-coluna-produtos>
+
 </div>
 
 
