@@ -1,6 +1,6 @@
 // src/app/coluna-produtos/coluna-produtos.component.ts
 import { Component, Input } from '@angular/core';
-import { CarrinhoService } from '../../servicos/carrinho-service';
+import { CarrinhoService } from '../../servicos/servico-carrinho-compras/carrinho-service';
 
 @Component({
   selector: 'app-coluna-produtos',

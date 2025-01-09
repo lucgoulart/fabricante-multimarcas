@@ -1,0 +1,118 @@
+<!-- <div class="container">
+  <h1>Cálculo de Frete</h1>
+  <form (ngSubmit)="calcularFrete()" [formGroup]="freteForm">
+    <label for="peso">Peso (kg):</label>
+    <input type="number" id="peso" formControlName="peso" required />
+
+    <label for="destino">Destino:</label>
+    <input type="text" id="destino" formControlName="destino" required />
+
+    <label for="tipoEntrega">Tipo de Entrega:</label>
+    <select id="tipoEntrega" formControlName="tipoEntrega">
+      <option value="normal">Normal</option>
+      <option value="express">Express</option>
+    </select>
+
+    <button type="submit" [disabled]="freteForm.invalid">Calcular Frete</button>
+  </form>
+
+  <div *ngIf="valorFrete !== null">
+    <h2>Resultado:</h2>
+    <p>O valor do frete é: R$ {{ valorFrete }}</p>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+}
+
+input, select, button {
+  width: 100%;
+  margin: 10px 0;
+  padding: 8px;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:disabled {
+  background-color: #ccc;
+}
+
+
+
+
+
+
+
+
+
+
+
+import { Component, HostListener, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
+
+@Component({
+  selector: 'app-pagina-inicial',
+  templateUrl: './pagina-inicial.component.html',
+  styleUrls: ['./pagina-inicial.component.css']
+})
+export class PaginaInicialComponent implements OnInit {
+
+  freteForm: FormGroup;
+  valorFrete: number | null = null;
+
+
+ngOnInit(): void {
+
+}
+  constructor(private fb: FormBuilder) {
+    this.freteForm = this.fb.group({
+      peso: [null],
+      destino: [''],
+      tipoEntrega: ['normal']
+    });
+  }
+
+  calcularFrete(): void {
+    const { peso, destino, tipoEntrega } = this.freteForm.value;
+
+    // Regras de cálculo básico
+    let baseFrete = 5; // Base fixa
+    baseFrete += peso * 2; // Multiplicador por peso
+
+    if (tipoEntrega === 'express') {
+      baseFrete *= 1.5; // Taxa de entrega expressa
+    }
+
+    // Apenas um exemplo: se destino for muito longe, adicionar taxa
+    if (destino.toLowerCase().includes('distante')) {
+      baseFrete += 10;
+    }
+
+    this.valorFrete = baseFrete;
+  }
+} -->
