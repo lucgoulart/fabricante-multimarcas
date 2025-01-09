@@ -433,13 +433,66 @@ body {
   }
 }
 
-.carrinho-dropdown{
-  background-color: white;
-  background-color: white;
-  position: absolute;
+/* Overlay para o carrinho */
+.carrinho-overlay {
+  position: fixed;
+  top: 0;
+  right: -100%; /* Carrinho escondido inicialmente */
+  width: 320px;
+  height: 100vh;
+  background-color: #fff;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3);
+  transition: right 0.3s ease-in-out; /* Transição suave para deslizamento */
   z-index: 1000;
-  width: 321px;
-  margin-left: -7rem;
-  margin-top: 25rem;
 }
 
+/* Quando o carrinho está aberto */
+.carrinho-overlay.ativo {
+  right: 0; /* Carrinho desliza para dentro da tela */
+}
+
+/* Estilo do menu dropdown do carrinho */
+.carrinho-dropdown {
+  padding: 20px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Itens no carrinho */
+.carrinho-dropdown ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.carrinho-dropdown li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.carrinho-dropdown img {
+  margin-right: 10px;
+  object-fit: cover;
+}
+
+/* Botão fechar no carrinho */
+.fechar-carrinho {
+  padding: 10px;
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.fechar-carrinho:hover {
+  background-color: #c82333;
+}
+
+
+@media (max-width: 768px) {
+  .carrinho-overlay {
+    width: 250px; /* Menor largura no mobile */
+  }
+}

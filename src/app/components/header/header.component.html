@@ -71,6 +71,7 @@
         <span (click)="abrirModal()">Acompanhar pedido</span>
       </div>
 
+<!-- Ícone do Carrinho -->
 <div class="block-shopping-cart">
   <img
     src="carrinho-de-compras.png"
@@ -78,7 +79,11 @@
     class="shopping-cart"
     (click)="toggleCarrinho()"
   />
-  <div *ngIf="mostrarCarrinho" class="carrinho-dropdown">
+</div>
+
+<!-- Menu do Carrinho (Overlay Deslizante) -->
+<div class="carrinho-overlay" [class.ativo]="mostrarCarrinho">
+  <div class="carrinho-dropdown">
     <h3>Itens no Carrinho</h3>
     <div *ngIf="itensCarrinho.length > 0; else carrinhoVazio">
       <ul>
@@ -96,8 +101,10 @@
     <ng-template #carrinhoVazio>
       <p>O carrinho está vazio.</p>
     </ng-template>
+    <button class="fechar-carrinho" (click)="toggleCarrinho()">Fechar</button>
   </div>
 </div>
+
 
 
 
@@ -151,33 +158,39 @@
     <a href=""><img src="style-makers-rf.png" alt="" class="img-logo"></a>
   </div>
 
-  <div class="block-shopping-cart-mobile">
-    <img
-      src="carrinho-de-compras.png"
-      alt="Carrinho de compras"
-      class="shopping-cart"
-      (click)="toggleCarrinho()"
-    />
-    <div *ngIf="mostrarCarrinho" class="carrinho-dropdown">
-      <h3>Itens no Carrinho</h3>
-      <div *ngIf="itensCarrinho.length > 0; else carrinhoVazio">
-        <ul>
-          <li *ngFor="let item of itensCarrinho">
-            <div>
-              <img [src]="item.produto.imagem" alt="Imagem do produto" width="50" />
-              <p>{{ item.produto.tamanho }} - {{ item.produto.preco }}</p>
-              <p>Quantidade: {{ item.quantidade }}</p>
-            </div>
-            <button (click)="removerDoCarrinho(item.produto)">Remover</button>
-          </li>
-        </ul>
-        <p><strong>Total:</strong> R$ {{ totalValor.toFixed(2) }}</p>
-      </div>
-      <ng-template #carrinhoVazio>
-        <p>O carrinho está vazio.</p>
-      </ng-template>
+<!-- Ícone do Carrinho -->
+<div class="block-shopping-cart-mobile">
+  <img
+    src="carrinho-de-compras.png"
+    alt="Carrinho de compras"
+    class="shopping-cart"
+    (click)="toggleCarrinho()"
+  />
+</div>
+
+<!-- Menu do Carrinho (Overlay Deslizante) -->
+<div class="carrinho-overlay" [class.ativo]="mostrarCarrinho">
+  <div class="carrinho-dropdown">
+    <h3>Itens no Carrinho</h3>
+    <div *ngIf="itensCarrinho.length > 0; else carrinhoVazio">
+      <ul>
+        <li *ngFor="let item of itensCarrinho">
+          <div>
+            <img [src]="item.produto.imagem" alt="Imagem do produto" width="50" />
+            <p>{{ item.produto.tamanho }} - {{ item.produto.preco }}</p>
+            <p>Quantidade: {{ item.quantidade }}</p>
+          </div>
+          <button (click)="removerDoCarrinho(item.produto)">Remover</button>
+        </li>
+      </ul>
+      <p><strong>Total:</strong> R$ {{ totalValor.toFixed(2) }}</p>
     </div>
+    <ng-template #carrinhoVazio>
+      <p>O carrinho está vazio.</p>
+    </ng-template>
+    <button class="fechar-carrinho" (click)="toggleCarrinho()">Fechar</button>
   </div>
+</div>
 </div>
 <div class="input-search-mobile">
 <div class="input-mobile">
