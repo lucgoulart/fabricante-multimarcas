@@ -1,10 +1,13 @@
 .coluna-produtos {
   display: flex;
-  align-items: center;
-  gap: 20px;
+  flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
+  justify-content: center; /* Centraliza os itens horizontalmente */
+  gap: 5rem; /* Espaçamento entre os produtos */
+  padding: 10px; /* Espaçamento interno para o container */
 }
 
 .produto {
+  max-width: calc(33.333% - 2rem);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -20,8 +23,8 @@
 }
 
 .imagem-container {
-  width: 100px;
-  height: 100px;
+  width: 163px;
+  height: 163px;
   overflow: hidden;
   border-radius: 8px;
 }
@@ -36,8 +39,7 @@
   margin-top: 10px;
 }
 
-
-/* src/app/coluna-produtos/coluna-produtos.component.css */
+/* Botão */
 button {
   background-color: #28a745;
   color: white;
@@ -51,15 +53,21 @@ button:hover {
   background-color: #218838;
 }
 
-/* src/app/header/header.component.css */
-.block-shopping-cart {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+/* Estilos responsivos */
+@media (max-width: 1024px) {
+  .produto {
+    flex: 1 1 calc(50% - 1rem); /* Dois produtos por linha em tablets */
+    max-width: calc(50% - 1rem);
+  }
 }
 
-.shopping-cart {
-  width: 40px;
-  height: 40px;
-  cursor: pointer;
+@media (max-width: 768px) {
+  .produto {
+    flex: 1 1 100%; /* Um produto por linha em dispositivos móveis */
+    max-width: 100%;
+  }
+
+  .coluna-produtos {
+    gap: 1rem; /* Reduz o espaço entre os produtos em telas menores */
+  }
 }

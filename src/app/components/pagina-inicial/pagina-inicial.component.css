@@ -147,6 +147,7 @@
     flex-wrap: wrap;
     justify-content: center;
     background-color: #000;
+    gap: 5rem;
   }
 
   .img-option-description {
@@ -315,12 +316,85 @@
     }
   }
 }
+.bloco-mais-vendidos{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5rem;
+}
 
+.title-bloco-mais-vendidos{
+  width: 100%;
+  max-width: 1271px;
+  display: flex;
+  font-size: 1.5rem;
+  padding: 10px;
+}
+
+.bloco-estilo-conforto {
+  display: flex; /* Para centralizar o conteúdo */
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  width: 100%; /* Ocupar toda a largura da tela */
+  background-color: #000; /* Cor de fundo opcional */
+  margin-top: 5rem;
+}
+
+.bloco-estilo-conforto img {
+  max-width: 100%; /* Garante que a imagem nunca ultrapasse a largura do container */
+  height: auto; /* Mantém a proporção da imagem */
+  object-fit: contain; /* Ajusta o conteúdo da imagem, se necessário */
+  border-radius: 8px; /* Bordas arredondadas opcionais */
+}
+
+/* Estilos para dispositivos menores */
+
+  .bloco-estilo-conforto img {
+    max-width: 90%; /* Reduz a largura da imagem */
+    margin: 0 auto; /* Centraliza a imagem */
+  }
+
+
+
+
+.bloco-clientes-confiam {
+  display: flex; /* Para centralizar o conteúdo facilmente */
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  width: 100%; /* Ocupar toda a largura disponível */
+  background: linear-gradient(to right, black 50%, #727171 50%);
+}
+
+.bloco-clientes-confiam img {
+  max-width: 100%; /* Garante que a imagem nunca ultrapasse a largura do container */
+  height: auto; /* Mantém a proporção da imagem */
+  object-fit: contain; /* Ajusta o conteúdo da imagem se necessário */
+  border-radius: 8px; /* Bordas arredondadas opcionais */
+}
+
+/* Estilo adicional para telas menores */
+@media (max-width: 768px) {
+
+  .bloco-clientes-confiam img {
+    max-width: 90%; /* Margem para evitar que a imagem encoste nas bordas */
+  }
+}
+
+
+@media (max-width: 1322px) {
+
+  .title-bloco-mais-vendidos  {
+    max-width: none;
+    width: auto;
+  }
+}
 
 
 @media (max-width: 1044px) {
   .collumn-seu-negocio{
     flex-direction: column;
+    align-items: center;
   }
   .image-content-background-2{
     max-height: none !important;
