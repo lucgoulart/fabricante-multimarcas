@@ -37,8 +37,8 @@ export class PaginaInicialComponent implements OnInit {
 
   images: { src: string; rota: string }[] = [
     { src: 'moda-fitness.png', rota: '/rota-1' },
-    { src: 'montar-meukit.png', rota: '/rota-2' },
-    { src: 'personalizacao-marca.png', rota: '/personalizacao' }
+    { src: 'montar-kit.png', rota: '/rota-2' },
+    { src: 'uniformes-para-sua-empresa.png', rota: '/personalizacao' }
   ];
 
 
