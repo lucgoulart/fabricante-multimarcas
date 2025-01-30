@@ -311,25 +311,6 @@ background-color: #4fc8d0;
     font-family: sans-serif;
     text-align: center;
   }
-  .description-marcas-bloco{
-    display: flex;
-    justify-content: center;
-    height: 30rem;
-    align-items: center;
-    width: 100%;
-    flex-direction: column;
-    gap: 20px;
-
-    img{
-      width: 90px;
-      height: 90px;
-      cursor: pointer;
-    }
-    .column-logos{
-      display: flex;
-      gap: 100px;
-    }
-  }
 }
 
 .duvidas-frequentes{
@@ -373,4 +354,29 @@ margin-bottom: 5rem;
   border: 1px solid #ccc !important;
   box-shadow: none !important;
 
+}
+
+
+
+.bloco-clientes-confiam {
+  display: flex; /* Para centralizar o conteúdo facilmente */
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  width: 100%; /* Ocupar toda a largura disponível */
+  background: linear-gradient(to right, black 50%, #727171 50%);
+}
+
+.bloco-clientes-confiam img {
+  max-width: 100%; /* Garante que a imagem nunca ultrapasse a largura do container */
+  height: auto; /* Mantém a proporção da imagem */
+  object-fit: contain; /* Ajusta o conteúdo da imagem se necessário */
+  border-radius: 8px; /* Bordas arredondadas opcionais */
+}
+
+/* Estilo adicional para telas menores */
+@media (max-width: 768px) {
+
+  .bloco-clientes-confiam img {
+    max-width: 90%; /* Margem para evitar que a imagem encoste nas bordas */
+  }
 }

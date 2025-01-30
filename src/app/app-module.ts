@@ -14,6 +14,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { QuemSomosComponent } from './components/quem-somos/quem-somos/quem-somos.component';
 import { ColunaProdutosComponent } from './components/componentes-globais/coluna-produtos/coluna-produtos.component';
+import { MusicModalComponent } from './components/componentes-globais/music-modal/music-modal/music-modal.component';
+import { MusicaService } from './components/servicos/musica/musica-service';
+
 
 
 @NgModule({
@@ -24,7 +27,8 @@ import { ColunaProdutosComponent } from './components/componentes-globais/coluna
     FooterComponent,
     PersonalizacaoComponent,
     QuemSomosComponent,
-    ColunaProdutosComponent
+    ColunaProdutosComponent,
+    MusicModalComponent
   ],
   imports: [
     BrowserModule,
@@ -35,12 +39,12 @@ import { ColunaProdutosComponent } from './components/componentes-globais/coluna
     FormsModule,
     BrowserAnimationsModule,
     MatExpansionModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   exports: [
     HeaderComponent,  // Exporte o HeaderComponent se necessário
   ],
-  providers: [],
+  providers: [MusicaService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

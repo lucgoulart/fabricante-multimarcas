@@ -1,0 +1,18 @@
+<div *ngIf="showModal" class="modal">
+  <div class="modal-content">
+    <h2>🎵 Torne sua experiência ainda melhor!</h2>
+<P>Queremos deixar sua navegação mais imersiva e agradável, por isso oferecemos a opção de ouvir uma trilha sonora enquanto explora nosso site. Você pode ativar ou desativar a música a qualquer momento, conforme sua preferência.</P>
+
+<p>Deseja ativar a música agora? 😊</p>
+
+<div class="content-buttons">
+    <button (click)="playMusic()" class="button">Sim</button>
+    <button (click)="closeModal()" class="button">Não</button>
+</div>
+  </div>
+</div>
+
+<div *ngIf="playMusic" class="player">
+  <button (click)="stopMusic()">⏸️ Pausar</button>
+  <button (click)="playMusic()">▶️ Reproduzir</button>
+</div>
