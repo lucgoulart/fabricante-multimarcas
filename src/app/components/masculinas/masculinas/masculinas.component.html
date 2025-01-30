@@ -1,0 +1,16 @@
+
+<app-header></app-header>
+
+<div class="container-produtos">
+<div class="link-home">
+  <a href="/">Home</a>
+  |
+  <a href="/masculinas">Masculino</a>
+</div>
+
+
+  <app-coluna-produtos *ngFor="let coluna of colunasDeProdutos" [produtos]="coluna"></app-coluna-produtos>
+</div>
+
+<app-footer></app-footer>
+

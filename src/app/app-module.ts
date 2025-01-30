@@ -16,6 +16,7 @@ import { QuemSomosComponent } from './components/quem-somos/quem-somos/quem-somo
 import { ColunaProdutosComponent } from './components/componentes-globais/coluna-produtos/coluna-produtos.component';
 import { MusicModalComponent } from './components/componentes-globais/music-modal/music-modal/music-modal.component';
 import { MusicaService } from './components/servicos/musica/musica-service';
+import { MasculinasComponent } from './components/masculinas/masculinas/masculinas.component';
 
 
 
@@ -28,7 +29,8 @@ import { MusicaService } from './components/servicos/musica/musica-service';
     PersonalizacaoComponent,
     QuemSomosComponent,
     ColunaProdutosComponent,
-    MusicModalComponent
+    MusicModalComponent,
+    MasculinasComponent
   ],
   imports: [
     BrowserModule,
